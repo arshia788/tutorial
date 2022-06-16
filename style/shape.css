@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:' IRANSansX-Light';
+}
+
+header{
+    width: 100%;
+    height: 8vh;
+    background-color: #111;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    color: #fff;
+}
+
+
+
+nav ul{
+    width: 32%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
