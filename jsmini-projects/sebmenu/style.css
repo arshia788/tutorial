@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "IRANSansX-Medium";
+    src: url( './fonts/IRANSansX-Medium.woff' ) format("woff");
+}
+  
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+body{
+    direction: rtl;
+    font-family:"IRANSansX-Medium";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffccbc;
+}
+  
+.action{
+    /* fixed miad aval fix mikoneh yek item ro bad relative ro faal mikoneh  */
+    position: fixed;
+    top: 35%;
+    right: 50%;
+    /* in miad daghih miareh vasat item ha ro */
+    /* baray in vast nabbod chon width dadi profile ro */
+    transform: translateX(50%);
+  
+}
+  
+.action .profile{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: crimson;
+  
+    /* alan img miad az profile postion migireh agar nabashe miad az body migireh */
+    position: relative;
+  
+    /* overflow miad migeh ke in style ha ro bezoor anjam bedeh  */
+    /* manzoor vase img ma hast ke kar nmikoneh  */
+  
+    overflow: hidden;
+  
+    /* alan mouse mireh ro img on dast miad  */
+    cursor: pointer;
+}
+  
+  .action .profile img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* kefiyat axe behtar shodeh va ba size monaseb */
+    object-fit: cover;
+  }
+  
+  .action .menu{
+    /* in miraeh postion ro az action ro migireh */
+    position: absolute;
+    top: 140px;
+    right: 0;
+    background: #fff;
+    width: 400px;
+    border-radius: 15px;
+  
+    /* translateY(80px) miad az on hadi ke goti top baz miad fasle mindazeh */
+  
+    transform: translateY(80px);
+  
+    /* item ha ro slid var miareh */
+    transition: all .3s ease-in-out;
+  
+    opacity: 0;
+  }
+  
+  /* baray in fasleh nadadi chon bayad be khodeh .menu class ezafeh beshe */
+  /* agar fasleh bendazi mireh donbal classs active */
+  
+  .action .menu.active{
+    opacity: 1;
+    /* in miad on fasle 80 ro sefer mikoneh yani dg nmireh bala age nazari */
+    transform: translateY(0);
+  }
+  
+  
+  /* aval rang ro yek chiz dg bezar bad bokon white  */
+  .action .menu::before{
+    content: '';
+    /* pedareh khodesh menu hast ke absolute hast ama miad  */
+    /* relative darnazar migireh chon barash mohem nist dar hallt before */
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    /* in ro char khondi 45deg */
+    transform: rotate(45deg);
+  }
+  
+  .action .menu h3{
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .action .menu h3 span{
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .action .menu ul{
+    width: 100%;
+    list-style: none;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+  
+  /* alan chon daroon li hay ma axe hast miad mikoneh toyek khat */
+  .action .menu ul li{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  
+  }
+  
+  .action .menu ul li img{
+    width: 30px;
+    /* tag a ro holl dadi bereh chap  */
+    margin-left: 10px;
+    opacity: .6;
+  }
+  
+  .action .menu ul li a{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  
+  
